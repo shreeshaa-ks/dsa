@@ -7,60 +7,69 @@ import java.util.Scanner;
 
 public class Task2 {
 
-	public static void main(String []args) {
+		 static void insertAtBeginning(int[] arr, int n, int element) {
+		        for (int i = n; i > 0; i--) {
+		            arr[i] = arr[i - 1];
+		        }
+		        arr[0] = element;
+		    }
 
-		Scanner sc=new Scanner(System.in);
+		   
+		    static void insertAtMiddle(int[] arr, int n, int element) {
+		        int mid = n / 2;
+		        for (int i = n; i > mid; i--) {
+		            arr[i] = arr[i - 1];
+		        }
+		        arr[mid] = element;
+		    }
 
-		System.out.println("Enter the size:");
+		    
+		    static void insertAtEnd(int[] arr, int n, int element) {
+		        arr[n] = element;
+		    }
 
-		int a=sc.nextInt();
+		    static void printArray(int[] arr, int size) {
+		        for (int i = 0; i < size; i++) {
+		            System.out.print(arr[i] + " ");
+		        }
+		        System.out.println();
+		    }
 
-		System.out.println("Enter the elements:");
+		 
+		    public static void main(String[] args) {
+		        Scanner sc = new Scanner(System.in);
+		        
+		        int[] arr = new int[100]; 
+		        int n;
 
-		int []num=new int[a];
+		        System.out.print("Enter number of elements: ");
+		        n = sc.nextInt();
 
-		for(int i=0;i<a;i++) {
+		        System.out.println("Enter elements:");
+		        for (int i = 0; i < n; i++) {
+		            arr[i] = sc.nextInt();
+		        }
 
-			num[i]=sc.nextInt();
+		        System.out.print("Enter element to insert: ");
+		        int element = sc.nextInt();
 
-		}
+		       
+		        insertAtBeginning(arr, n, element);
+		        System.out.print("Inserting at beginning: ");
+		        printArray(arr, n + 1);
 
-		System.out.println("Before insertion:"+Arrays.toString(num));
+		      
+		        insertAtMiddle(arr, n + 1, element);
+		        System.out.print("Inserting at middle: ");
+		        printArray(arr, n + 2);
 
-		int start=0;
+		        
+		        insertAtEnd(arr, n + 2, element);
+		        System.out.print("Inserting at end: ");
+		        printArray(arr, n + 3);
 
-		int end=a-1;
-
-		System.out.println("Element to be inserted:");
-
-		int k=sc.nextInt();
-
+		        sc.close();
+		    }
 		
-
-		int []array=new int[a+1];
-
-		for(int i=0,j=0;i<array.length;i++) {
-
-			if(i==start) {
-
-				array[i]=k;
-
-			}
-
-			else {
-
-				array[i]=num[j++];
-
-			}
-
-		}
-			
-
-		System.out.println("After insertion:"+Arrays.toString(array));
-
-	}
-
-
-
 }
 
