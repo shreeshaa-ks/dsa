@@ -1,9 +1,6 @@
 package datastructure;
 
-import java.util.Arrays;
-
 import java.util.Scanner;
-
 
 public class Task2 {
 
@@ -42,7 +39,7 @@ public class Task2 {
 		        int[] arr = new int[100]; 
 		        int n;
 
-		        System.out.print("Enter number of elements: ");
+		        System.out.print("Enter size: ");
 		        n = sc.nextInt();
 
 		        System.out.println("Enter elements:");
