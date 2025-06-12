@@ -23,6 +23,9 @@ public class Day6_Task2 {
 			top--;
 		}
 	}
+	public void peek() {
+		System.out.println("Top value:"+stack[top]);
+	}
 	public void display() {
 		for(int i=0;i<=top;i++) {
 			System.out.print(stack[i]+" ");
@@ -37,8 +40,9 @@ public class Day6_Task2 {
 		do {
 			System.out.println("\n1.Push");
 			System.out.println("2.Pop");
-			System.out.println("3.Display");
-			System.out.println("4.Exit");
+			System.out.println("3.Peek");
+			System.out.println("4.Display");
+			System.out.println("5.Exit");
 			System.out.println("Enter your choice:");
 			choice=s.nextInt();
 		switch(choice) {
@@ -53,14 +57,18 @@ public class Day6_Task2 {
 			st.pop();
 			break;
 		case 3:
+			System.out.println("Peek Operation");
+			st.peek();
+			break;
+		case 4:
 			System.out.println("Display");
 			st.display();
 			break;
-		case 4:
+		case 5:
 			System.out.println("Exiting..");
 		}
 
-		}while(choice!=4);
+		}while(choice!=5);
 		s.close();
 	}
 
