@@ -16,7 +16,7 @@ public class Day8_Task2 {
 				return findMyValue(a,find,mid+1,r);
 			}
 			else {
-				return findMyValue(a,find,mid-1,l);
+				return findMyValue(a,find,l,mid-1);
 			}
 		}		
 	public void binarysearch() {
@@ -34,7 +34,7 @@ public class Day8_Task2 {
 		int res=findMyValue(a, find, left, right);
 		if(res!=-1) {
 			
-			System.out.println("Value found"+res);
+			System.out.println("Value found at "+res);
 		}
 		else {
 			System.out.println("Value not found");
