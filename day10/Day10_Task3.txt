@@ -1,0 +1,11 @@
+USE samp;
+UPDATE students
+SET name = 'Aravind'
+WHERE name = 'Arjun';
+
+SELECT * FROM students
+WHERE marks < 60;
+
+SELECT name, department, section
+FROM students
+WHERE marks < 60;

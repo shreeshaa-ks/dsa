@@ -1,0 +1,9 @@
+create database samp;
+use samp;
+create table students (id int auto_increment primary key, name varchar(50), marks int, department varchar(50), section varchar(10));
+insert into students (name, marks ,department , section)value
+('Rahul',75,'IT','A'),
+('Meenu',82,'CSE','B'),
+('Arjun',59,'ECE','A'),
+('Priya',40,'EEE','C'),
+('Kiran',90,'MECH','B');

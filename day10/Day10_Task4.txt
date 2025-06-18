@@ -1,0 +1,11 @@
+USE samp;
+ALTER TABLE students
+ADD COLUMN gender VARCHAR(10);
+
+
+ALTER TABLE students
+DROP COLUMN section;
+
+TRUNCATE TABLE students;
+
+DROP DATABASE samp;
